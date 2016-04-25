@@ -1,2 +1,2 @@
 #!/bin/sh
-docker build -t=21zoo/zerodb:latest   .
+docker build -t=michwill/zerodb-server:0.1.23 .
