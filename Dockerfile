@@ -8,14 +8,13 @@ RUN apk -U --no-progress add ca-certificates gcc build-base python-dev libffi-de
     pip install --upgrade zerodb-server==$ZEROBD_SERVER_VERSION && \
     apk del gcc build-base python-dev libffi-dev
 
-WORKDIR /server
-
-COPY ./files/conf      /conf
 COPY ./files/start.sh  /start.sh
 
 RUN mkdir /data
 
 VOLUME /data
+
+WORKDIR /data
 
 EXPOSE 8001 8001
 
